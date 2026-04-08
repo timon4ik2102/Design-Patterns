@@ -1,0 +1,17 @@
+{
+  "name": "design-patterns",
+  "version": "1.0.0",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^25.5.2",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  },
+  "scripts": {
+    "dev": "tsx watch main.ts",
+    "start": "tsx main.ts",
+    "build": "tsc",
+    "startjs": "node dist/main.js"
+  }
+}
