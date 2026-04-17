@@ -4,11 +4,15 @@ export class Computer {
     public storage: string;
     public gpu: string;
 
-    constructor(cpu: string, ram: string, storage: string, gpu: string) {
+    private constructor(cpu: string, ram: string, storage: string, gpu: string) {
         this.cpu = cpu;
         this.ram = ram;
         this.storage = storage;
         this.gpu = gpu;
+    }
+
+    static createComputer(cpu: string, ram: string, storage: string, gpu: string) {
+        return new Computer(cpu, ram, storage, gpu);
     }
 
     public showComputer(): void {

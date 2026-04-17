@@ -1,32 +1,48 @@
 import { Computer } from "./computer";
 
-export class ComputerBuilder {
+export interface IComputerBuilder {
+    reset(): void;
+    setCPU(cpu: string): void;
+    setRAM(ram: string): void;
+    setStorage(storage: string): void;
+    setGPU(gpu: string): void;
+    getResult(): Computer;
+}
+
+export class ComputerBuilder implements IComputerBuilder {
     private cpu: string = "";
     private ram: string = "";
     private storage: string = "";
     private gpu: string = "";
 
-    public setCPU(cpu: string): ComputerBuilder {
+
+    public reset(): void {
+        this.cpu = "";
+        this.ram = "";
+        this.storage = "";
+        this.gpu = "";
+    }
+
+    public setCPU(cpu: string): void {
         this.cpu = cpu;
-        return this;
     }
 
-    public setRAM(ram: string): ComputerBuilder {
+    public setRAM(ram: string): void {
         this.ram = ram;
-        return this;
     }
 
-    public setStorage(storage: string): ComputerBuilder {
+    public setStorage(storage: string): void {
         this.storage = storage;
-        return this;
     }
 
-    public setGPU(gpu: string): ComputerBuilder {
+    public setGPU(gpu: string): void {
         this.gpu = gpu;
-        return this;
     }
 
-    public build(): Computer {
-        return new Computer(this.cpu, this.ram, this.storage, this.gpu);
+    public getResult(): Computer {
+         if (!this.cpu || !this.ram || !this.storage || !this.gpu) {
+            throw new Error("Computer is not configured");
+         }
+        return Computer.createComputer(this.cpu, this.ram, this.storage, this.gpu);
     }
 }   
