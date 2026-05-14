@@ -1,4 +1,4 @@
-import Director  from "./builderDirector";
+import Director from "./builderDirector";
 import { ComputerBuilder } from "./computerBuilder";
 
 function builderTest() {
@@ -6,20 +6,19 @@ function builderTest() {
     const director = new Director();
     director.setBuilder(builder);
 
-    director.buildGamingPC();
-    const gamingPC = builder.getResult();
-    gamingPC.showComputer();
-
+    console.log('Standard minimal product:');
     director.buildOfficePC();
-    const officePC = builder.getResult();
-    officePC.showComputer();
+    builder.getProduct().listParts();
 
-    builder.setCPU("AMD Ryzen 5");
-    builder.setRAM("16GB");
-    builder.setStorage("1TB SSD");
-    builder.setGPU("RTX 3060");
-    const customPC = builder.getResult();
-    customPC.showComputer();
+    console.log('Standard full featured product:');
+    director.buildGamingPC();
+    builder.getProduct().listParts();
+
+    // The Builder pattern can be used without a Director class.
+    console.log('Custom product:');
+    builder.producePartA();
+    builder.producePartC();
+    builder.getProduct().listParts();
 }
 
 export default builderTest;

@@ -1,7 +1,7 @@
 export abstract class Engine {
-    name: string;
-    resource: number;
-    constructor (name: string, resource: number) {
+    public name: string;
+    public resource: number;
+    protected constructor (name: string, resource: number) {
         this.name = name;
         this.resource = resource;
 

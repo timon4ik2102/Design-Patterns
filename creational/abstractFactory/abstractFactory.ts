@@ -6,4 +6,3 @@ export abstract class AbstractFactory {
     abstract createEngine(name: string, resource: number): Engine;
 }
 
-

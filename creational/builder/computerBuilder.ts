@@ -1,48 +1,39 @@
 import { Computer } from "./computer";
 
 export interface IComputerBuilder {
-    reset(): void;
-    setCPU(cpu: string): void;
-    setRAM(ram: string): void;
-    setStorage(storage: string): void;
-    setGPU(gpu: string): void;
-    getResult(): Computer;
+    producePartA(): void;
+    producePartB(): void;
+    producePartC(): void;
 }
 
 export class ComputerBuilder implements IComputerBuilder {
-    private cpu: string = "";
-    private ram: string = "";
-    private storage: string = "";
-    private gpu: string = "";
+    private product: Computer = new Computer();
 
+    constructor() {
+        this.reset();
+    }
 
     public reset(): void {
-        this.cpu = "";
-        this.ram = "";
-        this.storage = "";
-        this.gpu = "";
+        this.product = new Computer();
     }
 
-    public setCPU(cpu: string): void {
-        this.cpu = cpu;
+
+    public producePartA(): void {
+        this.product.parts.push('CPU: Intel Core i9-13900K');
     }
 
-    public setRAM(ram: string): void {
-        this.ram = ram;
+    public producePartB(): void {
+        this.product.parts.push('RAM: 64GB DDR5');
     }
 
-    public setStorage(storage: string): void {
-        this.storage = storage;
+    public producePartC(): void {
+        this.product.parts.push('Storage: 2TB NVMe SSD');
     }
 
-    public setGPU(gpu: string): void {
-        this.gpu = gpu;
-    }
 
-    public getResult(): Computer {
-         if (!this.cpu || !this.ram || !this.storage || !this.gpu) {
-            throw new Error("Computer is not configured");
-         }
-        return Computer.createComputer(this.cpu, this.ram, this.storage, this.gpu);
+    public getProduct(): Computer {
+        const result = this.product;
+        this.reset();
+        return result;
     }
-}   
+}

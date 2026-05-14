@@ -1,6 +1,10 @@
 import { Engine } from "./engine";
 
-export class NormalEngineEngine extends Engine {
+export class NormalEngine extends Engine {
+    constructor(name: string, resource: number) {
+        super(name, resource);
+    }
+
     showEngineInfo(): void {
         console.log(`Name: ${this.name} is normal engine`);
     };

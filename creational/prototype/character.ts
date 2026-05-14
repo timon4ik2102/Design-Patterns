@@ -15,13 +15,12 @@ class Character implements IPrototype<Character> {
         this.inventory = inventory;
     }
 
-    /** Same stats; `inventory` is a new array so clone and original stay independent. */
     clone(): Character {
         return new Character(this.name, this.health, this.level, [...this.inventory]);
     }
 
     showInfo(): void {
-        console.log(`Name: ${this.name}, Health: ${this.health}, Level: ${this.level}`);
+        console.log(`Name: ${this.name}, Health: ${this.health}, Level: ${this.level}, Inventory: ${this.inventory}`);
     }
 }
 

@@ -5,11 +5,18 @@ import { HondaFactory } from './creational/abstractFactory/hondaFactory.ts';
 import builderTest from './creational/builder/builderTest.ts';
 import factoryMethodTest from './creational/factory/factoryMethodTest.ts';
 import createAbstractFactory from './creational/abstractFactory/createAbstractFactory.ts';
-
+import adapterTest from './structural/adapter/adapterTest.ts';
+import decoratoreTest from './structural/decorator/decoratoreTest.ts';
+import testFacade from './structural/facade/facadeTest.ts';
+import compositeTest from './structural/composite/compositeTest.ts';
 
 // factoryMethodTest();
 // singletonTest();
 // prototypeTest() 
 // builderTest()
-createAbstractFactory(new FerrariFactory(), 'Ferrari F8', 420, 'ferrari gtb 296', 250000);
-createAbstractFactory(new HondaFactory(), 'Honda Civic', 120, 'honda civic', 100000);
+// createAbstractFactory(new FerrariFactory(), 'Ferrari F8', 420, 'ferrari gtb 296', 250000);
+// createAbstractFactory(new HondaFactory(), 'Honda Civic', 120, 'honda civic', 100000);
+// adapterTest();
+// decoratoreTest();
+// testFacade();
+compositeTest();

@@ -1,6 +1,10 @@
 import { Car} from "./car";
 
 export class Honda extends Car {
+    constructor(name: string, speed: number) {
+        super(name, speed);
+    }
+
     showInfo(): void {
         console.log(`This car name: ${this.name} and we dont show speed`);
     };

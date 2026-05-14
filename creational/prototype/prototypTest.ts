@@ -13,3 +13,4 @@ function prototypeTest() {
 }
 
 export default prototypeTest;
+
