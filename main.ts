@@ -9,6 +9,9 @@ import adapterTest from './structural/adapter/adapterTest.ts';
 import decoratoreTest from './structural/decorator/decoratoreTest.ts';
 import testFacade from './structural/facade/facadeTest.ts';
 import compositeTest from './structural/composite/compositeTest.ts';
+import proxyTest from './structural/proxy/proxyTest.ts';
+import flyweightTest from './structural/flyweight/flyweightTest.ts';
+import bridgeTest from './structural/bridge/bridgeTest.ts';
 
 // factoryMethodTest();
 // singletonTest();
@@ -19,4 +22,7 @@ import compositeTest from './structural/composite/compositeTest.ts';
 // adapterTest();
 // decoratoreTest();
 // testFacade();
-compositeTest();
+// compositeTest();
+// proxyTest();
+// flyweightTest();
+bridgeTest();

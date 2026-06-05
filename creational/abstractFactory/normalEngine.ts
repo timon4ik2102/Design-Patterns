@@ -1,4 +1,4 @@
-import { Engine } from "./engine";
+import Engine  from "./engine";
 
 export class NormalEngine extends Engine {
     constructor(name: string, resource: number) {

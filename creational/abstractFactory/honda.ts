@@ -1,4 +1,4 @@
-import { Car} from "./car";
+import Car from "./car";
 
 export class Honda extends Car {
     constructor(name: string, speed: number) {
