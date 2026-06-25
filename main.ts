@@ -1,0 +1,46 @@
+import singletonTest from './creational/singleton/singletonTest.ts';
+import prototypeTest from './creational/prototype/prototypTest.ts';
+import { FerrariFactory} from './creational/abstractFactory/ferrariFactory.ts';
+import { HondaFactory } from './creational/abstractFactory/hondaFactory.ts';
+import builderTest from './creational/builder/builderTest.ts';
+import factoryMethodTest from './creational/factory/factoryMethodTest.ts';
+import createAbstractFactory from './creational/abstractFactory/createAbstractFactory.ts';
+import adapterTest from './structural/adapter/adapterTest.ts';
+import decoratoreTest from './structural/decorator/decoratoreTest.ts';
+import testFacade from './structural/facade/facadeTest.ts';
+import compositeTest from './structural/composite/compositeTest.ts';
+import proxyTest from './structural/proxy/proxyTest.ts';
+import flyweightTest from './structural/flyweight/flyweightTest.ts';
+import bridgeTest from './structural/bridge/bridgeTest.ts';
+import strategyTest from './behaviour/strategy/stratefyTest.ts';
+import stateTest from './behaviour/state/stateTest.ts';
+import commandTest from './behaviour/command/commandTest.ts';
+import chainTest from './behaviour/chain/chainTest.ts';
+import iteratorTest from './behaviour/iterator/iteratorTest.ts';
+import testVisitor from './behaviour/visitor/testVisitor.ts';
+import templateMethodTest from './behaviour/templateMethod/templateMethodTest.ts';
+import mementoTest from './behaviour/memento/mementoTest.ts';
+import mediatorTest from './behaviour/mediator/mediatorTest.ts';
+
+// factoryMethodTest();
+// singletonTest();
+// prototypeTest() 
+// builderTest()
+// createAbstractFactory(new FerrariFactory(), 'Ferrari F8', 420, 'ferrari gtb 296', 250000);
+// createAbstractFactory(new HondaFactory(), 'Honda Civic', 120, 'honda civic', 100000);
+// adapterTest();
+// decoratoreTest();
+// testFacade();
+// compositeTest();
+// proxyTest();
+// flyweightTest();
+// bridgeTest();
+// strategyTest();
+// stateTest();
+// commandTest();
+// chainTest();
+// iteratorTest();
+// testVisitor();
+// templateMethodTest();
+// mementoTest();
+// mediatorTest();
